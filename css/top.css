@@ -1,0 +1,691 @@
+/*------------------------------------------------
+Small Screen
+------------------------------------------------*/
+body {
+  font-size: 14px;
+  font-family: 'M PLUS 1p', Verdana, sans-serif;
+  margin: 0;
+  color: #555;
+}
+
+p {
+  line-height: 2;
+}
+
+h2 {
+  font-weight:100;
+  font-size: 1rem;
+  color: #666;
+  display: inline-block;
+}
+
+h2:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #ffdb78;
+  width: 40px;
+}
+
+.aboutus_bg > h2:after{
+  display: none;
+}
+
+h3{
+  font-weight:100;
+  font-size: 1rem;
+  color: #e59335;
+  margin:0;
+}
+
+.fadein{
+  opacity : 0;
+  transition : all 1.5s;
+}
+
+.zoom{
+  transform: scale(0.5,0.5);
+}
+
+.delay1{
+  transition : all 1s 0.3s;
+}
+
+.delay2{
+  transition : all 1s 0.6s;
+}
+
+
+.scrollin {
+  opacity : 1;
+  transform: scale(1,1);
+  transform : translate(0, 0);
+}
+
+
+.header_bg{
+  background: url(../img/1141.png);
+  background-attachment: fixed;
+  height: 630px;
+  animation: fadeIn 3s ease 0s 1 normal;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  background-size:270%;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.maine_logo{
+  padding-top: 160px;
+  animation: fadeIn 5s ease 0s 1 normal;
+}
+
+.maine_logo img{
+  width:265px;
+}
+
+.header_bg a{
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  display: inline-block;
+  text-decoration: none;
+  transform: translate(0, -50%);
+  transition : all 0.5s;
+}
+
+/* スクロールボタン start- */
+.header_bg a span {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.header_bg a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+.header_bg a span:hover{
+ background-color: #333;
+ opacity: 0.5;
+}
+
+/* スクロールボタン end--*/
+
+.center{
+text-align: center;
+}
+
+.center h1{
+  position: relative;
+  display: inline-block;
+}
+
+.center h1:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 2px #666;
+  width: 40%;
+}
+
+h2{
+  font-size: 24px;
+  font-weight: 500;
+  margin: 30px;
+}
+
+section#guidelines h2,section#praivacy h2 {
+  margin: 30px 30px 30px 0;
+}
+
+.container {
+  width: 92%;
+  margin: 0 auto;
+}
+
+ body > section {
+  margin-top: 100px;
+}
+
+.message_box{
+  width: 86%;
+  margin: 80px auto;
+  background: white;
+  padding: 1rem;
+  position: relative;
+}
+
+.message_box p{
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.message_text span{
+  color: #e59335;
+}
+
+
+.maine_message{
+  font-size: 18px;
+  line-height: 4;
+  font-style: italic;
+}
+
+.bd span{
+  background: grey;
+  position:absolute;
+  transition-duration: 2.5s;
+ }
+
+.bdT{width: 0;  height:2px; top:0; left: 0px; }
+.bdB{width: 0; height:2px; bottom:0; right:0px;}
+.bdR{height:0; width :2px; right:0; top:0px;}
+.bdL{height:0; width :2px; left:0; bottom:0px;}
+
+.move .bdT{width: 98%;}
+.move .bdB{width: 98%;}
+.move .bdR{height:95%;}
+.move .bdL{height:95%;}
+
+.service_category{
+  margin-top: 50px;
+  text-align: center;
+  width: 80%;
+  margin: 50px auto 0;
+}
+
+.services{
+  margin-bottom: 50px;
+}
+
+.services {
+    width: 32.3%;
+    display: inline-block;
+}
+
+.services.litera-img {
+    display: block;
+    width: 100%;
+}
+
+.services img{
+  width:170px;
+}
+
+.services.litera-img img {
+    width: 85%;
+}
+
+.service_text{
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.service_text_en{
+  font-size: 16px;
+  font-style: italic;
+  line-height: 2;
+}
+
+.aboutus_bg{
+  background: url(../img/aboutus_bg.jpg);
+  background-attachment: fixed;
+  height:162px;
+  background-position: -450px 812px;
+}
+
+.aboutus_bg h2{
+line-height: 5;
+font-weight: bold;
+color:white;
+}
+
+.aboutus_summary_table{
+  font-size: 16px;
+  width: auto;
+  padding: 10px;
+  margin: 50px auto;
+}
+
+th, td{
+  padding: 20px 10px;
+  vertical-align: top;
+}
+
+td{
+  text-align: left;
+}
+
+.profile img{
+  width:180px;
+  border-radius: 50%;
+}
+
+.prof_text{
+  margin: 0 auto;
+  width: 80%;
+  text-align: left;
+}
+
+.ff-button-bar{
+  text-align: center;
+
+}
+
+section#info{
+  text-align: center;
+  margin: 0 auto;
+}
+
+#info iframe {
+    height: 1000px;
+}
+
+p#p-litera {
+    font-size: 18px;
+}
+
+.profile.center.no2 {
+    margin-top: 5em;
+}
+
+/* NEWS (iframe) */
+#news {
+    width: 70%;
+    height:800px;
+    border: none;
+}
+
+.news_more {
+    text-align: center;
+    display: block;
+    font-size: 24px;
+    line-height: 2em;
+    color: #6a5acd;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 1000;
+    margin: 0 0 50px 0;
+}
+
+.news_title{
+    max-width: 920px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    position: relative;
+    padding: 3rem 0 0 0;
+}
+
+.news_title h2{
+    font-size: 3.9rem;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    border-bottom: 4px solid #8D8DF4;
+}
+
+.news_title img{
+    display: inline-block;
+    width: initial;
+}
+
+.news_title p{
+    font-size: 2.5rem;
+    padding-top: 2rem;
+}
+
+.iframe_form {
+    text-align: center;
+}
+
+section .news_more {
+    text-align: center;
+    display: block;
+    font-size: 24px;
+    line-height: 2em;
+    color: #6a5acd;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 500;
+    margin: 0 0 50px 0;
+}
+
+
+/* 20221017 SNS iframe追加 */
+
+.twitter_iframe,.fb_iframe {
+  display: inline-block;
+  vertical-align: top;
+}
+
+div#sns_frame {
+  margin: 5% auto 0;
+}
+
+.twitter_iframe {
+  margin-right: 3%;
+}
+
+.sns_box {
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+.fb_iframe .fb_sp {
+  display: none;
+}
+
+.tw_sp, #twitter-widget-1 {
+  display: none !important;
+}
+
+.tw_pc, #twitter-widget-0 {
+  display: block !important;
+}
+
+.fb_tab {
+  display: none !important;
+}
+
+
+/* 20230112取引先一覧追加 */
+ul.clients-list1,ul.clients-list2,ul.clients-list3 {
+  list-style-type: none;
+  width: 336px;
+  vertical-align: top;
+}
+
+ul.clients-list1 li,ul.clients-list2 li,ul.clients-list3 li {
+  padding: 5px 0;
+}
+
+div.clients-list-div {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+
+ul.clients-list3 li.blank-li {
+  height: 23px;
+}
+
+
+/* コンプライアンスガイドラインページ */
+
+section#guidelines ul.norm {
+  list-style-type: square;
+}
+
+section#guidelines ul {
+  list-style-type: lower-roman;
+}
+
+section#guidelines h2:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #1233d9;
+  width: 40px;
+}
+
+
+
+/*------------------------------------------------
+Medium Screen
+------------------------------------------------*/
+@media (min-width: 570px) {
+
+  .header_bg{
+    height: 900px;
+    background-size: 250%;
+  }
+
+  .header_bg a{
+    bottom: 180px;
+    left: 49%;
+  }
+
+  .maine_logo{
+    padding-top: 300px;
+    animation: fadeIn 5s ease 0s 1 normal;
+  }
+
+  .maine_logo img{
+    width:400px;
+  }
+
+  a span {
+    width: 70px;
+    height: 70px;
+  }
+
+  .aboutus_bg{
+    background-position: -240px 900px;
+  }
+
+}
+
+
+
+
+/*------------------------------------------------
+Large Screen
+------------------------------------------------*/
+@media (min-width: 912px) {
+
+  .header_bg{
+    height: 750px;
+    background-size: 134%;
+    /* background-position: -80% 0;  */
+  }
+
+  .header_bg a{
+    bottom: 140px;
+    left: 50%;
+  }
+
+  .maine_logo{
+    padding-top: 200px;
+    animation: fadeIn 5s ease 0s 1 normal;
+  }
+
+  .maine_logo img{
+    width:350px;
+  }
+
+  a span {
+    width: 60px;
+    height: 60px;
+  }
+
+  .services{
+    width: 32.3%;
+    display: inline-block;
+  }
+
+  .aboutus_bg{
+    height: 200px;
+    background-position: 0px 900px;
+    background-size: 100%;
+  }
+
+  .aboutus_bg h2{
+  line-height: 6;
+  }
+
+  /* 追記部分 */
+  .prof_contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 45px;
+  }
+
+
+  .profile.center {
+    width: 30%;
+    margin-top: 5em;
+  }
+
+
+  .prof_text {
+    width: 70%;
+  }
+  /* 追記部分ここまで */
+
+  .services.litera-img {
+      width: 100% !important;
+      display: block;
+  }
+
+  /* 20221018 SNS */
+
+  .tw_pc, #twitter-widget-0 {
+    margin: 0 auto !important;
+  }
+
+}
+
+
+/* Contact */
+@media screen and (max-width: 896px) {
+
+  section#info iframe{
+    height: 900px !important;
+  }
+  
+  .width80 {
+    width: 92%;
+  }
+  
+  .services.litera-img img {
+      width: 100%;
+  }
+    
+  .services {
+    display: block;
+    width: 100%;
+  }
+
+  div.clients-list-div {
+    width: 95%;
+  }
+
+  div#sns_frame {
+    width: 100%;
+  }
+
+  ul.clients-list1, ul.clients-list2, ul.clients-list3 {
+    width: 30%;
+  }
+
+  .twitter_iframe {
+    margin: auto 0 10% auto;
+  }
+}
+  
+
+
+/* 21.12.27 馬場さんデザイン調整 */
+div#no-image div.prof_img p {
+  margin-top: 202px;
+}
+
+
+@media (max-width: 767px) {
+  .sns_box {
+    margin-left: 2%;
+  }
+
+  .twitter-timeline.twitter-timeline-rendered {
+    margin-left: 5%;
+  }
+
+  div#sns_frame {
+    width: 100%;
+  }
+
+  .twitter_iframe, .fb_iframe {
+    display: block;
+  }
+
+  .fb_iframe iframe {
+    width: 98%;
+  }
+
+  .fb_iframe .fb_sp {
+    display: block;
+  }
+
+  .fb_iframe .fb_pc {
+    display: none;
+  }
+
+  .fb_iframe {
+    margin-top: 10%;
+  }
+
+  .twitter_iframe {
+      margin-right: 0;
+      width: 98%;
+  }
+
+  .tw_pc,#twitter-widget-0 {
+    display: none !important;
+  }
+
+  .tw_sp,#twitter-widget-1 {
+    display: block !important;
+  }
+
+  .fb_tab {
+    display: none !important;
+  }
+
+  div.clients-list-div {
+    width: 84%;
+    margin: 10px auto 50px;
+    display: block;
+    padding: 0;
+  }
+
+  ul.clients-list2 {
+    margin-left: 0;
+    width: auto;
+  }
+
+  ul.clients-list1, ul.clients-list2, ul.clients-list3 {
+    margin: 0 auto;
+    width: auto;
+  }
+
+  #news {
+    width: 95%;
+  }
+}

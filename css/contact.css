@@ -1,0 +1,79 @@
+/*------------------------------------------------
+Small Screen
+------------------------------------------------*/
+
+
+.contact table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contact th,td{
+  font-weight: 100;
+  display: block;
+  text-align: center;
+}
+
+input{
+  width:80%;
+  line-height: 2;
+  font-size: 16px;
+}
+
+textarea{
+  width:80%;
+  height:200px;
+  font-size:16px;
+  border:1px solid #ccc;
+}
+
+.submit{
+  text-align: center;
+}
+
+.sendbutton{
+  /* width: 230px; */
+  font-size: 15px;
+  color: #0054a7;
+  border: 1px solid #0054a7;
+  border-radius: 5px;
+  padding: 15px 20px;
+  background-color: #fff;
+  margin: 50px auto;
+  cursor:pointer;
+  transition: 0.5s;
+}
+
+.sendbutton:hover {
+    background: #0054a7;
+    color: white;
+}
+
+/*-------------------------------------------
+medium screens
+-------------------------------------------*/
+@media (min-width: 570px) {
+  table{
+    margin:0 auto;
+    max-width:850px;
+  }
+
+  th,td{
+    display: table-cell;
+    text-align: center;
+    padding:20px 0;
+  }
+
+  td{
+    text-align: left;
+  }
+
+
+}
+
+/*------------------------------------------------
+Large Screen
+------------------------------------------------*/
+@media (min-width: 912px) {
+
+}
