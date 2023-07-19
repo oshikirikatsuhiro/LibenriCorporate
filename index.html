@@ -265,14 +265,42 @@
 
   <section>
     <div class="center fadein">
-      <h2>NEWS</h2>
+      <h2><a href="news_post.html">NEWS</a></h2>
     </div>
     <div class="iframe_form">
-        <iframe id="news" src="/news_list.php/" scrolling="no"></iframe>
+        
     </div>
     <div class="news_more">
         <a href="/news" target="_blank" rel="noopener noreferrer">お知らせ一覧</a>
-    </div>
+    
+        <div class="result">ここにお知らせ一覧が表示されます。</div>
+        <input type="button" class="sample_btn" value="お知らせ一覧を取得する">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script>
+          console.log('test1');
+        $(function(){
+            //.sampleをクリックしてajax通信を行う
+            $('.sample_btn').on('click', (function(){
+              console.log('test');  
+              $.ajax({
+                    url: 'https://kgmoufg45rcrtft3go5q5jk77m0jkvct.lambda-url.ap-northeast-1.on.aws/',
+                    /* 自サイトのドメインであれば、https://kinocolog.com/ajax/test.html というURL指定も可 */
+                    type: 'GET',
+                    dataType: 'text'
+                }).done(function(data){
+                    /* 通信成功時 */
+                    $('.result').text(data); //取得したHTMLを.resultに反映
+                    
+                }).fail(function(data){
+                    /* 通信失敗時 */
+                    alert('通信失敗！');
+                            
+                });
+            }));
+        });
+        </script>
+    
+      </div>
   </section>
 
   <section>

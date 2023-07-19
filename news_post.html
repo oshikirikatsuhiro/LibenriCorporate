@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <title>Post Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form name=example_form id="form" class="form1">
+        <input id="id" type="text" method="POST" placeholder="IDを入力">
+        <input id="name" type="text" method="POST" placeholder="メッセージを入力">
+        <input id="submit" method="POST" type="button" value="送信">
+        
+    </form>
+    <hr/>
+    <div id="status"></div>
+    
+    <hr/>
+    <div id="result"></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    
+    <script>
+        console.log('test1');
+        var data = {id,name};
+        $(function(){
+            //.sampleをクリックしてajax通信を行う
+          $('#submit').on('click', (function(){
+            //var item = document.forms["example_form"];
+            console.log('test');  
+           // $.ajaxSetup();
+            $.ajax({
+                  url: 'https://4ebfdlcok564fzwyhnsjzzhe3a0csweo.lambda-url.ap-northeast-1.on.aws/',
+                  /* 自サイトのドメインであれば、https://kinocolog.com/ajax/test.html というURL指定も可 */
+                
+                  type: 'POST',
+                  //contentType: 'application/json',
+                  dataType: 'json',
+                  data: {
+                    id:$("#id").val(), 
+                    name:$("#name").val(),
+                }
+                        
+              }).done(function(data){
+                console.log('test2');
+                console.log($('#id').val());
+                console.log($('#name').val());                
+                console.log((data));
+                  /* 通信成功時 */
+                  $('.result').text(data); //取得したHTMLを.resultに反映
+                  
+              }).fail(function(data){
+                  /* 通信失敗時 */
+                  
+                  alert('通信失敗！');
+                          
+              });
+          }));
+      });
+      </script>
+
+        <div class="result">ここにお知らせ一覧が表示されます。</div>
+        <input type="button" class="btn" value="お知らせ一覧を取得する">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    console.log('test1-2');
+  $(function(){
+      //.sampleをクリックしてajax通信を行う
+      $('.btn').on('click', (function(){
+        console.log('test0-1');  
+        $.ajax({
+              url: 'https://kgmoufg45rcrtft3go5q5jk77m0jkvct.lambda-url.ap-northeast-1.on.aws/',
+              /* 自サイトのドメインであれば、https://kinocolog.com/ajax/test.html というURL指定も可 */
+              type: 'GET',
+              dataType: 'text'
+          }).done(function(data){
+              /* 通信成功時 */
+              $('.result').text(data); //取得したHTMLを.resultに反映
+              
+          }).fail(function(data){
+              /* 通信失敗時 */
+              alert('通信失敗！');
+                      
+          });
+      }));
+  });
+  </script>
+
+</body>
+
+</html>
